@@ -1,0 +1,36 @@
+/* *************************** CSS GENERALE *************************** */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+main {
+  height: calc(100vh - 90px);
+  display: flex;
+}
+/* *************************** CSS NAVBAR *************************** */
+nav {
+  width:230px;
+  background-color: #111;
+}
+
+/* *************************** CSS SEZIONE PRINCIPALE *************************** */
+#content-section {
+  background-color: #141922;
+  height: 100%;
+  width: calc(100% - 230px);
+
+}
+
+
+/* *************************** CSS PLAYER *************************** */
+footer{
+  background-color: #282828;
+  height: 90px;
+  overflow: hidden;
+}
