@@ -6,7 +6,8 @@
 }
 
 html {
-  font-size: 18px;
+
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -16,7 +17,63 @@ main {
 /* *************************** CSS NAVBAR *************************** */
 nav {
   width:230px;
-  background-color: #111;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  font-size: 12px;
+}
+nav h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  padding-bottom: 20px;
+}
+
+nav a {
+  color: #6C6C6C;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li img {
+  height: 20px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+nav i {
+  font-size: 35px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+#main-logo {
+  width: 125px;
+  margin: 20px 0;
+}
+#user-nav img {
+  width: 15px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+#user-nav div {
+  padding-bottom: 10px;
+}
+#user-nav div:last-of-type {
+  padding-top: 10px;
+}
+#user-nav div:last-of-type a{
+  color: #fff;
+}
+
+#user-nav div:last-of-type img{
+  background-color: #6c6c6c;
+  border-radius: 50%;
 }
 
 /* *************************** CSS SEZIONE PRINCIPALE *************************** */
