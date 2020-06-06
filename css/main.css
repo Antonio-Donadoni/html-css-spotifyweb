@@ -19,6 +19,13 @@ h1, h2, h3 ,h4, h5 {
   font-weight: bold;
 }
 
+.active {
+  position: relative;
+}
+.active a {
+  color: #fff !important;
+}
+
 /* *************************** CSS NAVBAR *************************** */
 nav {
   width:230px;
@@ -47,6 +54,10 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+nav a:hover {
+  color: #fff;
+}
+
 nav ul li img {
   height: 20px;
   padding-right: 5px;
@@ -56,6 +67,14 @@ nav i {
   font-size: 35px;
   vertical-align: middle;
   padding-right: 5px;
+}
+.left-green {
+  height: 100%;
+  width: 3px;
+  background-color: #1ED760;
+  position: absolute;
+  top:0;
+  left:-20px;
 }
 #playlist-ul {
   overflow-y: auto;
@@ -109,23 +128,40 @@ nav i {
   border: 2px solid #E1E1E2;
   border-radius: 10px;
   padding: 10px 20px;
+  transition: padding 0.3s;
+}
+#upgrade-banner a:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 25px;
 }
 
 .inner-nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   list-style-type: none;
+  padding-bottom: 15px;
 }
 
 .inner-nav li {
-  padding: 10px 15px 10px 0;
+  padding: 10px;
 }
 .inner-nav li a {
   text-decoration: none;
   color: #6C6C6C;
   font-weight: bold;
   font-size: 12px;
+}
+.bottom-green {
+  height: 3px;
+  width: 50%;
+  background-color: #1ED760;
+  position: absolute;
+  bottom: -5px;
+  left:50%;
+  transform: translateX(-50%);
 }
 .row {
   padding: 15px 0 15px 10px;
@@ -137,13 +173,35 @@ nav i {
 }
 .card {
 text-align: center;
-padding-left: 10px;
+margin-left: 10px;
 margin-right: 30px;
   max-width: 150px;
 }
-.card img {
+.img-container {
+  position: relative;
+  margin-bottom: 5px;
 
+}
+.card img {
   max-width: 150px;
+  transition: all 0.3s;
+}
+
+.card i {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:#fff;
+  font-size: 350%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.img-container:hover i {
+  opacity: 1;
+}
+.img-container:hover img {
+  filter: opacity(0.5);
 }
 .card span, #content-section p {
   font-weight: bold;
@@ -202,6 +260,9 @@ justify-content: center;
 #actual-song div i {
   font-weight: 120%;
 }
+#actual-song div i:hover{
+  color: #fff;
+}
 
 /* PLAYER/PARTE CENTRALE */
 
@@ -215,11 +276,21 @@ justify-content: center;
   border-radius: 25px;
   background-color: #5A5A5A;
   display: inline-block;
+  margin: 0 10px;
+  position: relative;
 }
+
 .buttons i{
   padding-right: 20px;
   color: #fff;
-  font-size: 120%;
+  font-size: 100%;
+}
+#play-button {
+  font-size: 150%;
+  transition: all 0.3s;
+}
+#play-button:hover {
+  font-size: 175%;
 }
 .time {
   margin-top: 15px;
@@ -231,10 +302,6 @@ justify-content: center;
   color: #fff;
   font-weight: bold;
   font-size: 80%;
-}
-.player-bar {
-  margin: 0 10px;
-
 }
 /* SETTINGS/PARTE DESTRA */
 
@@ -250,6 +317,32 @@ justify-content: center;
   height:3px;
   border-radius: 25px;
   background-color: #5A5A5A;
+  position: relative;
+}
+.bar-cover {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 30%;
+  height:3px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.white-dot{
+ position: absolute;
+ top: -3px;
+ right:0;
+ width:10px;
+ height:10px;
+ border-radius:50%;
+ background: #fff;
+ opacity: 0;
+}
+.bar-cover:hover {
+  background-color: #1ED760;
+}
+.bar-cover:hover .white-dot {
+  opacity: 1;
 }
 #settings i {
   color: #fff;
