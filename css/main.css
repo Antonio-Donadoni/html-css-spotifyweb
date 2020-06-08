@@ -47,6 +47,10 @@ nav {
 }
 
 
+#title-playlist {
+height: 70px;
+}
+
 #playlists {
  height: calc(100% - 270px);
  overflow-y: auto;
