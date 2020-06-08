@@ -46,17 +46,6 @@ nav {
   height: calc(100% - 65px);
 }
 
-#user-nav {
-  height: 65px;
-}
-
-#nav-link {
-  height: 200px;
-}
-
-#title-playlist {
-height: 70px;
-}
 
 #playlists {
  height: calc(100% - 270px);
@@ -441,7 +430,7 @@ justify-content: center;
     width: calc(100% - 50px);
 }
 
- #main-logo, #playlist-ul, nav h3, nav span  {
+ #main-logo, #playlists,#title-playlist, nav h3, nav span  {
   display: none;
  }
  #small-logo {
