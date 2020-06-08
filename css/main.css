@@ -41,6 +41,24 @@ nav {
   overflow-y: hidden;
 }
 
+#navbar{
+  overflow-y: hidden;
+  height: calc(100% - 65px);
+}
+
+#user-nav {
+  height: 65px;
+}
+
+#nav-link {
+  height: 200px;
+}
+
+#playlists {
+height: calc(100% - 200px);
+ overflow-y: auto;
+}
+
 nav h3 {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -132,6 +150,7 @@ nav i {
   padding-top: 70px;
   overflow-y: auto;
 }
+
 #upgrade-banner {
   width: calc(100% - 230px);
   height: 70px;
@@ -143,6 +162,7 @@ nav i {
   opacity: 0.7;
   z-index: 900;
 }
+
 #upgrade-banner a {
   text-decoration: none;
   margin-right: 50px;
@@ -152,6 +172,7 @@ nav i {
   padding: 10px 20px;
   transition: padding 0.3s;
 }
+
 #upgrade-banner a:hover {
   color: #fff;
   border: 2px solid #fff;
@@ -175,6 +196,9 @@ nav i {
   color: #6C6C6C;
   font-weight: bold;
   font-size: 12px;
+}
+.inner-nav li a:hover {
+  color: #fff;
 }
 
 .bottom-green {
