@@ -1,0 +1,474 @@
+/* *************************** CSS GENERALE *************************** */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  height: calc(100vh - 90px);
+  display: flex;
+}
+h1, h2, h3 ,h4, h5 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
+  position: relative;
+}
+.active a {
+  color: #fff !important;
+}
+
+/* *************************** CSS NAVBAR *************************** */
+nav {
+  width:230px;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  font-size: 12px;
+  overflow-y: hidden;
+}
+
+#navbar{
+  overflow-y: hidden;
+  height: calc(100% - 65px);
+}
+
+
+#title-playlist {
+height: 70px;
+}
+
+#playlists {
+ height: calc(100% - 270px);
+ overflow-y: auto;
+}
+
+nav h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow-y: auto;
+}
+
+nav ul li {
+  padding-bottom: 20px;
+}
+
+nav a {
+  color: #6C6C6C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav ul li img {
+  height: 20px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+nav i {
+  font-size: 35px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.left-green {
+  height: 100%;
+  width: 3px;
+  background-color: #1ED760;
+  position: absolute;
+  top:0;
+  left:-20px;
+}
+
+#main-logo {
+  width: 125px;
+  margin: 20px 0;
+}
+
+#small-logo {
+  width: 25px;
+  margin: 15px 0;
+  display: none;
+}
+
+#playlist-ul {
+  overflow-x: auto;
+}
+
+#user-nav img {
+  width: 15px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+#user-nav div {
+  padding-bottom: 10px;
+}
+
+#user-nav div:last-of-type {
+  padding-top: 10px;
+}
+
+#user-nav div:last-of-type a{
+  color: #fff;
+}
+
+#user-nav div:last-of-type img{
+  background-color: #6c6c6c;
+  border-radius: 50%;
+}
+
+/* *************************** CSS SEZIONE PRINCIPALE *************************** */
+#content-section {
+  background-color: #141922;
+  height: 100%;
+  width: calc(100% - 230px);
+  padding-top: 70px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#upgrade-banner {
+  width: calc(100% - 230px);
+  height: 70px;
+  background-color: #080B12;
+  text-align: right;
+  line-height: 70px;
+  position:fixed;
+  top:0;
+  opacity: 0.7;
+  z-index: 900;
+}
+
+#upgrade-banner a {
+  text-decoration: none;
+  margin-right: 50px;
+  color: #E1E1E2;
+  border: 2px solid #E1E1E2;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: padding 0.3s;
+}
+
+#upgrade-banner a:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+}
+
+.inner-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-bottom: 15px;
+}
+
+.inner-nav li {
+  padding: 10px;
+}
+.inner-nav li a {
+  text-decoration: none;
+  color: #6C6C6C;
+  font-weight: bold;
+  font-size: 12px;
+}
+.inner-nav li a:hover {
+  color: #fff;
+}
+
+.bottom-green {
+  height: 3px;
+  width: 50%;
+  background-color: #1ED760;
+  position: absolute;
+  bottom: -5px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.row {
+  padding: 15px 0 15px 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+.card {
+text-align: center;
+padding-left: 10px;
+padding-right: 30px;
+width: 200px;
+margin-bottom: 10px;
+}
+
+.img-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.card img {
+  width: 180px;
+  transition: all 0.3s;
+}
+
+.card i {
+  position: absolute;
+  top: 50%;
+  left:55%;
+  transform: translate(-50%,-50%);
+  color:#fff;
+  font-size: 350%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.img-container:hover i {
+  opacity: 1;
+}
+
+.img-container:hover img {
+  filter: opacity(0.5);
+}
+
+.card span, #content-section p {
+  font-weight: bold;
+  color: #6C6C6C;
+  font-size: 70%;
+}
+
+#content-section .circle {
+  border-radius: 50%;
+}
+
+/* *************************** CSS PLAYER *************************** */
+footer{
+  background-color: #282828;
+  height: 90px;
+  overflow: hidden;
+  display: flex;
+  color: #6C6C6C;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ACTUAL SONG/PARTE DESTRA */
+
+#actual-song {
+  width: 15%;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+#actual-song img {
+  width: 70px;
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+#actual-song span {
+  font-size: 12px;
+}
+#actual-song span:first-of-type{
+  color: #fff;
+  font-weight: bold;
+}
+#actual-song span:last-of-type{
+  font-weight: bold;
+}
+
+#actual-song .song-title {
+height: 70px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+#actual-song div i {
+  font-weight: 120%;
+}
+#actual-song div i:hover{
+  color: #fff;
+}
+
+/* PLAYER/PARTE CENTRALE */
+
+#player {
+  width: 70%;
+  text-align: center;
+}
+.player-bar {
+  width: 50%;
+  height:3px;
+  border-radius: 25px;
+  background-color: #5A5A5A;
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+}
+
+.buttons i{
+  padding-right: 10px;
+  color: #fff;
+  font-size: 100%;
+}
+
+#play-button {
+  font-size: 150%;
+  transition: all 0.3s;
+}
+
+#play-button:hover {
+  font-size: 175%;
+}
+.time {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.time span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 80%;
+}
+/* SETTINGS/PARTE DESTRA */
+
+#settings {
+  width: 15%;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+.volume-bar {
+  width: 50%;
+  height:3px;
+  border-radius: 25px;
+  background-color: #5A5A5A;
+  position: relative;
+}
+.bar-cover {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 30%;
+  height:3px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.white-dot{
+ position: absolute;
+ top: -3px;
+ right:0;
+ width:10px;
+ height:10px;
+ border-radius:50%;
+ background: #fff;
+ opacity: 0;
+}
+.bar-cover:hover {
+  background-color: #1ED760;
+}
+.bar-cover:hover .white-dot {
+  opacity: 1;
+}
+#settings i {
+  color: #fff;
+  font-size:100%;
+}
+
+
+/* ********************************* MEDIA QUERY ************************* */
+/* @media all and (max-width:1200px) {
+  .card {
+  width: calc(100% / 4);
+  }
+}
+@media all and (max-width: 764px) {
+  .card {
+  width: calc(100% / 3);
+  }
+} */
+
+
+@media all and (max-width:576px) {
+  nav {
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 0;
+    align-items: center;
+  }
+
+  #content-section {
+    width: calc(100% - 50px);
+  }
+  #upgrade-banner {
+    width: calc(100% - 50px);
+}
+
+ #main-logo, #playlists,#title-playlist, nav h3, nav span  {
+  display: none;
+ }
+ #small-logo {
+   display: block;
+ }
+ .card {
+ width: calc(100% / 2);
+
+ }
+ footer {
+   overflow-x: hidden;
+ }
+ .buttons i{
+   padding-right: 10px;
+   color: #fff;
+   font-size: 60%;
+ }
+ #play-button {
+   font-size: 80%;
+ }
+}
+@media all and (max-height:450px) {
+  #navbar {
+    overflow-y: visible;
+  }
+  #title-playlist, #playlists {
+    display: none;
+  }
+}
+
+@media all and (max-height:330px) {
+  #upgrade-banner, #user-nav {
+    display: none;
+  }
+
+}
