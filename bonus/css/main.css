@@ -324,6 +324,7 @@ justify-content: center;
 #player {
   width: 70%;
   text-align: center;
+  min-width: 140px;
 }
 .player-bar {
   width: 50%;
@@ -446,6 +447,29 @@ justify-content: center;
  }
  #play-button {
    font-size: 80%;
+ }
+ .time span {
+   font-size: 60%;
+ }
+
+ #settings {
+   min-width: 130px;
+ }
+ #settings i {
+   font-size:80%;
+ }
+ #actual-song {
+   min-width: 130px;
+ }
+ #actual-song img {
+   width: 30px;
+   margin-top: 20px;
+ }
+ #actual-song div i {
+   font-size: 80%;
+ }
+ #actual-song span {
+   font-size: 10px;
  }
 }
 @media all and (max-height:450px) {
