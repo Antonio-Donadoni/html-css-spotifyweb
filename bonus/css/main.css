@@ -234,6 +234,7 @@ margin-bottom: 10px;
 
 .card img {
   width: 180px;
+  animation: fade-in 1.5s;
   transition: all 0.3s;
 }
 
@@ -408,16 +409,6 @@ justify-content: center;
 
 
 /* ********************************* MEDIA QUERY ************************* */
-/* @media all and (max-width:1200px) {
-  .card {
-  width: calc(100% / 4);
-  }
-}
-@media all and (max-width: 764px) {
-  .card {
-  width: calc(100% / 3);
-  }
-} */
 
 
 @media all and (max-width:576px) {
@@ -471,4 +462,22 @@ justify-content: center;
     display: none;
   }
 
+}
+/* *****************ANIMATION************************ */
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
