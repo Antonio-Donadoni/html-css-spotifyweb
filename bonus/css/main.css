@@ -113,9 +113,9 @@ nav i {
 }
 
 #user-nav img {
-  width: 15px;
+  width: 22px;
   margin-right: 5px;
-  vertical-align: sub;
+  vertical-align: middle;
 }
 
 #user-nav div {
